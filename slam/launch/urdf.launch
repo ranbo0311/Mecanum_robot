@@ -1,0 +1,13 @@
+<launch>
+  <arg name="gui" default="true" />
+
+  <param name="robot_description" command="$(find xacro)/xacro.py robot.urdf" />
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" >
+  	<param name="publish_frequency" value="5" />
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="model_tf" args="0 0 0.04 0 0 0 base_link robot_base 300" />
+
+</launch>

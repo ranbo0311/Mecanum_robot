@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="rviz" type="rviz" name="rviz" />
+	<include file="$(find slam)/launch/slam.launch" />
+
+	<include file="$(find slam)/launch/urdf.launch" />
+	<include file="$(find slam)/launch/run_move_base.launch" />
+
+</launch>
