@@ -1,2 +1,4 @@
 # Mecanum_robot
-mecanum robot with ros
+Autonomous navigation mecanum robot with ros
+
+This is a code for autonomous navigation using move_base for my mecanum wheel robot.
