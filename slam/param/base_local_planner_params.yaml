@@ -12,14 +12,14 @@ TrajectoryPlannerROS:
   y_vels: [-0.3, -0.1, 0.1, 0.3]
   yaw_goal_tolerance: 0.2
   xy_goal_tolerance: 0.2
-  pdist_scale: 0.6
-  gdist_scale: 0.8
-  occdist_scale: 0.01
+  pdist_scale: 1.0
+  gdist_scale: 1.0
+  occdist_scale: 0.05
   dwa: false
   publish_cost_grid_pc: false
   meter_scoring: true
-  sim_time: 3.0
-  sim_granularity: 0.08
+  sim_time: 4.0
+  sim_granularity: 0.04
   vx_samples: 5
   vtheta_samples: 20
 
