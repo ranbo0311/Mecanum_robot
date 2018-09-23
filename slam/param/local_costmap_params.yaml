@@ -8,6 +8,6 @@ local_costmap:
   resolution: 0.01
   static_map: false
   rolling_window: true
-  transform_tolerance: 1.0
+  transform_tolerance: 0.7
   cost_scaling_factor: 0.5
-  inflation_radius: 0.1
+  inflation_radius: 0.05
