@@ -1,0 +1,19 @@
+<launch>
+
+	<node pkg="ydlidar" name="scan" type="ydlidar_node" />
+
+	<node pkg="tf" type="static_transform_publisher" name="lidar_tf" args="-0.035 0 0 3.14159265359 0 0 base_footprint horizontal_laser_link 50" />
+
+	<node type="raspicam_node" pkg="raspicam" name="raspicam_node" output="screen">
+
+		<param name="width" value="240"/>
+		<param name="height" value="180"/>
+		<param name="framerate" value="20"/>
+		<param name="quality" value="10"/>
+		<param name="tf_prefix" value="raspicam"/>
+
+	</node>
+
+	<node pkg="rosservice" type="rosservice" name="start_capture" args="call --wait /camera/start_capture"/>
+
+</launch>
