@@ -2,7 +2,7 @@
 
 	<node pkg="ydlidar" name="scan" type="ydlidar_node" />
 
-	<node pkg="tf" type="static_transform_publisher" name="lidar_tf" args="-0.035 0 0 3.14159265359 0 0 base_footprint horizontal_laser_link 50" />
+	<node pkg="tf" type="static_transform_publisher" name="lidar_tf" args="-0.035 0 0 3.14159265359 0 0 base_footprint  laser_frame 50" />
 
 	<node type="raspicam_node" pkg="raspicam" name="raspicam_node" output="screen">
 
